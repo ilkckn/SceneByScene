@@ -19,8 +19,9 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
   padding: 1rem;
+  padding-top: 11rem; /* Navbar height + 1rem */
   box-sizing: border-box;
 }
 

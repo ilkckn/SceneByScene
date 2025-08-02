@@ -4,6 +4,7 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 import { errorHandler } from "./utils/errorHandler.js";
 import userRoutes from "./routes/userRoutes.js";
+import bookRoutes from "./routes/bookRoutes.js";
 
 const app = express();
 const PORT = process.env.PORT;
@@ -24,6 +25,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/users", userRoutes);
+app.use("/books", bookRoutes);
 
 app.use(/.*/, (req, res) => {
   res.status(404).json({ message: "Route not found" });

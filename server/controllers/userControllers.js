@@ -3,7 +3,6 @@ import { CustomError } from "../utils/errorHandler.js";
 import asyncHandler from "../utils/asyncHandler.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import { auth } from "../middlewares/authMiddleware.js";
 
 export const getAllUsers = asyncHandler(async (req, res) => {
   const users = await User.find();
